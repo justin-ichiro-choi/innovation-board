@@ -1,9 +1,12 @@
-import {Client} from 'boardgame.io/react';
+import { Client } from 'boardgame.io/react';
+import { Local } from 'boardgame.io/multiplayer';
 import { Innovation } from './Game';
+import { Board } from './Board';
 
 const App = Client({
   game: Innovation,
-  numPlayers: 2, // Adjust to make this dynamic
+  board: Board,
+  multiplayer: Local(),
 });
 
 export default App;
